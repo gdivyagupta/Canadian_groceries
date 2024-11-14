@@ -3,6 +3,7 @@
 # Observational Data Trends in Product Inventory
 
 **Author:** Divya Gupta
+
 **Date:** 2024-11-14
 
 # Overview
