@@ -1,24 +1,21 @@
 file_path <- "/Users/Dell/Downloads/hammer-5-csv/hammer-4-product.csv"  
 data <- read.csv(file_path)
-head(data)
 
 # Install the necessary libraries 
 install.packages("ggplot2")
 install.packages("dplyr")
-install.packages("tidyr")
 
 # Load libraries
 library(ggplot2)
 library(dplyr)
-library(tidyr)
 
 # Visual 1 - Vendor Distribution 
 
 # Group by vendor and count products, then filter for top 10 vendors
-vendor_distribution <- data %>%
-  group_by(vendor) %>%
-  summarise(product_count = n()) %>%
-  arrange(desc(product_count)) %>%
+vendor_distribution <- data |>
+  group_by(vendor) |>
+  summarise(product_count = n()) |>
+  arrange(desc(product_count)) |>
   slice_head(n = 10)
 
 # Bar plot for top 10 vendors
@@ -32,11 +29,11 @@ ggplot(vendor_distribution, aes(x = reorder(vendor, -product_count), y = product
 # Visual 2 - Brand Distrubution 
 
 # Group by brand and count products, then filter for top 10 brands
-brand_distribution <- data %>%
-  filter(!is.na(brand)) %>%
-  group_by(brand) %>%
-  summarise(brand_count = n()) %>%
-  arrange(desc(brand_count)) %>%
+brand_distribution <- data |>
+  filter(!is.na(brand)) |>
+  group_by(brand) |>
+  summarise(brand_count = n()) |>
+  arrange(desc(brand_count)) |>
   slice_head(n = 10)
 
 # Bar plot for top 10 brands
@@ -47,9 +44,8 @@ ggplot(brand_distribution, aes(x = reorder(brand, -brand_count), y = brand_count
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 # General Summ Stats
-
-numeric_stats <- data %>%
-  select_if(is.numeric) %>%
+numeric_stats <- data |>
+  select_if(is.numeric) |>
   summarise(
     across(everything(), list(
       mean = ~mean(. , na.rm = TRUE),
