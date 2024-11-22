@@ -13,11 +13,11 @@ This repository contains the analysis and findings for a study on trends in an o
 
 This repository includes the following main files:
 
-- **data/raw_data**: Contains the original dataset as received.
-- **paper**: Contains the Quarto document, along with a reference bibliography file and the final rendered PDF of the paper.
-- **scripts**: Includes SQL scripts for data cleaning and analysis (`data_analysis.sql`) and R scripts for visualizations.
-- **other**: Includes the text script documenting LLM usage using ChatGPT.
+- **data**: Contains the original dataset as received.
+- **paper**: Contains the Quarto document, along with the final rendered PDF of the paper.
+- **scripts**: Includes an SQL script for data cleaning and analysis (`exploration.sql`) and an R script for visualizations (`visuals.R`).
+- **other**: Includes the text script documenting LLM usage using ChatGPT along with the sketches of the visuals generated using R.
 
 ## Statement on LLM Usage
-Aspects of the project structure, code, and paper outline were developed with assistance from ChatGPT 4.0. The conversation history from interactions with the language model is saved in `scripts/LLM_usage.txt` for transparency and future reference.
+Aspects of the project structure, code, and paper outline were developed with assistance from ChatGPT 4.0. The conversation history from interactions with the language model is saved in `other/LLM_usage.txt` for transparency and future reference.
 
