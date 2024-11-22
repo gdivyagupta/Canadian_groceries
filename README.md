@@ -1,4 +1,4 @@
-# Canadian_groceries
+# Canadian Groceries
 
 # Observational Data Trends in Product Inventory
 
