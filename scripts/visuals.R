@@ -1,4 +1,4 @@
-file_path <- "/Users/Dell/Downloads/hammer-5-csv/hammer-4-product.csv"  
+file_path <- "data/dataset.csv"  
 data <- read.csv(file_path)
 
 # Install the necessary libraries 
